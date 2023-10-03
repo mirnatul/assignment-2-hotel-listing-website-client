@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useLoaderData, useSearchParams } from 'react-router-dom'
+import React from 'react';
+import { useParams, useLoaderData } from 'react-router-dom'
 import Card from '../../components/Card/Card';
 
 const SingleHotel = () => {
@@ -9,17 +9,17 @@ const SingleHotel = () => {
     const urlParams = new URLSearchParams(myKeysValues)
 
     const params = urlParams.get('identity')
-    console.log(params);
+    // console.log(params);
 
 
     const { id } = useParams()
-    const identity = useSearchParams()
-    console.log(identity);
+    // const identity = useSearchParams()
+    // console.log(identity);
     // console.log(id);
 
-    console.log(hotelData);
+    // console.log(hotelData);
     const singleHotelData = hotelData.find(singleData => singleData.id == id)
-    console.log(singleHotelData);
+    // console.log(singleHotelData);
 
     return (
         <div className='max-w-md mx-auto mt-3'>

@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: '/singleHotel/:id',
         element: <SingleHotel></SingleHotel>,
-        loader: () => fetch('../public/hotel-data.json')
+        loader: () => fetch('hotel-data.json')
       }
     ]
   },
