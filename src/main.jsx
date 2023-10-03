@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Main from './Layout/Main';
 import Home from './pages/Home/Home';
+import SingleHotel from './pages/SingleHotel/SingleHotel';
 
 
 const router = createBrowserRouter([
@@ -16,7 +17,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+      },
+      {
+        path: '/singleHotel/:id',
+        element: <SingleHotel></SingleHotel>,
+        loader: () => fetch('../public/hotel-data.json')
       }
     ]
   },
